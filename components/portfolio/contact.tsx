@@ -1,6 +1,6 @@
 "use client"
 
-import { Mail, Linkedin, Github, MapPin, ArrowUpRight } from "lucide-react"
+import { Mail, Linkedin, Github, MapPin, ArrowUpRight, Phone } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { useLanguage } from "@/lib/language-context"
 
@@ -16,7 +16,7 @@ export function Contact() {
       <div className="max-w-5xl mx-auto relative z-10">
         {/* Section header */}
         <div className="flex items-center gap-4 mb-4">
-          <span className="text-xs font-mono text-primary tracking-[0.3em]">04</span>
+          <span className="text-xs font-mono text-primary tracking-[0.3em]">05</span>
           <div className="w-12 h-px bg-primary" />
           <h2 className="text-xs font-mono tracking-[0.3em] text-foreground uppercase">
             {t.contact.title}
@@ -43,7 +43,7 @@ export function Contact() {
               className="bg-primary text-primary-foreground hover:bg-primary/80 group font-mono text-xs tracking-wider uppercase"
               asChild
             >
-              <a href="mailto:nayra@example.com" className="flex items-center gap-3">
+              <a href="mailto:nayratenciadiaz04@gmail.com" className="flex items-center gap-3">
                 <span className="w-2 h-2 bg-primary-foreground" />
                 {t.contact.cta}
                 <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
@@ -54,7 +54,7 @@ export function Contact() {
           {/* Contact info */}
           <div className="space-y-4">
             <a 
-              href="mailto:nayra@example.com"
+              href="mailto:nayratenciadiaz04@gmail.com"
               className="flex items-center gap-4 p-5 border border-border hover:border-primary/50 transition-all group"
             >
               <div className="flex-shrink-0 w-10 h-10 border border-primary flex items-center justify-center group-hover:bg-primary transition-colors">
@@ -62,12 +62,25 @@ export function Contact() {
               </div>
               <div>
                 <h4 className="text-xs font-mono text-muted-foreground mb-1 tracking-wider">{t.contact.email}</h4>
-                <p className="text-foreground font-mono text-sm">nayra@example.com</p>
+                <p className="text-foreground font-mono text-sm">nayratenciadiaz04@gmail.com</p>
               </div>
             </a>
 
             <a 
-              href="https://linkedin.com"
+              href="tel:+34680452813"
+              className="flex items-center gap-4 p-5 border border-border hover:border-primary/50 transition-all group"
+            >
+              <div className="flex-shrink-0 w-10 h-10 border border-primary flex items-center justify-center group-hover:bg-primary transition-colors">
+                <Phone className="w-4 h-4 text-primary group-hover:text-primary-foreground transition-colors" />
+              </div>
+              <div>
+                <h4 className="text-xs font-mono text-muted-foreground mb-1 tracking-wider">{t.contact.phone}</h4>
+                <p className="text-foreground font-mono text-sm">+34 680 452 813</p>
+              </div>
+            </a>
+
+            <a 
+              href="https://linkedin.com/in/nayra-atencia-diaz"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-4 p-5 border border-border hover:border-primary/50 transition-all group"
@@ -77,12 +90,12 @@ export function Contact() {
               </div>
               <div>
                 <h4 className="text-xs font-mono text-muted-foreground mb-1 tracking-wider">LinkedIn</h4>
-                <p className="text-foreground font-mono text-sm">linkedin.com/in/nayra-atencia</p>
+                <p className="text-foreground font-mono text-sm">linkedin.com/in/nayra-atencia-diaz</p>
               </div>
             </a>
 
             <a 
-              href="https://github.com"
+              href="https://github.com/nayra-atencia"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-4 p-5 border border-border hover:border-primary/50 transition-all group"

@@ -3,14 +3,15 @@
 import { useLanguage } from "@/lib/language-context"
 
 const technicalSkills = {
-  frontend: ["HTML", "CSS", "JavaScript"],
-  backend: ["Java", "PHP", "SQL"],
-  tools: ["Git", "REST APIs", "Responsive Design"],
+  frontend: ["HTML5", "CSS", "JavaScript", "jQuery", "React", "Bootstrap", "Tailwind", "Angular"],
+  backend: ["Java", "PHP", "Node.js", "SQL", "PL-SQL"],
+  tools: ["Git", "GitHub"],
+  systems: ["Linux (Ubuntu, Kali, Arch)"],
 }
 
 const languageSkills = [
   { name: "Espanol", code: "ES", levelKey: "native" as const },
-  { name: "English", code: "EN", levelKey: "advanced" as const },
+  { name: "English", code: "EN", levelKey: "c2" as const },
   { name: "Francais", code: "FR", levelKey: "advanced" as const },
   { name: "Korean", code: "KO", levelKey: "intermediate" as const },
 ]
@@ -20,6 +21,7 @@ export function Skills() {
 
   const levelMap = {
     native: t.skills.native,
+    c2: t.skills.c2,
     advanced: t.skills.advanced,
     intermediate: t.skills.intermediate,
   }
@@ -28,6 +30,7 @@ export function Skills() {
     frontend: t.skills.frontend,
     backend: t.skills.backend,
     tools: t.skills.tools,
+    systems: t.skills.systems,
   }
 
   return (

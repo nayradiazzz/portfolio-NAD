@@ -1,6 +1,6 @@
 "use client"
 
-import { Calendar, MapPin, ArrowRight } from "lucide-react"
+import { Calendar, MapPin, ArrowRight, Briefcase } from "lucide-react"
 import { useLanguage } from "@/lib/language-context"
 
 export function Experience() {
@@ -13,6 +13,7 @@ export function Experience() {
       company: t.experience.role1Company,
       location: t.experience.role1Location,
       period: t.experience.role1Period,
+      type: t.experience.role1Type,
       description: t.experience.role1Desc,
       achievements: [
         t.experience.role1Achievement1,
@@ -20,7 +21,7 @@ export function Experience() {
         t.experience.role1Achievement3,
         t.experience.role1Achievement4,
       ],
-      technologies: ["JavaScript", "PHP", "Java", "HTML/CSS", "SQL"],
+      technologies: ["Windows", "Linux", "Networking", "Hardware", "IT Support"],
       featured: true
     },
     {
@@ -29,6 +30,7 @@ export function Experience() {
       company: t.experience.role2Company,
       location: t.experience.role2Location,
       period: t.experience.role2Period,
+      type: t.experience.role2Type,
       description: t.experience.role2Desc,
       achievements: [
         t.experience.role2Achievement1,
@@ -36,23 +38,7 @@ export function Experience() {
         t.experience.role2Achievement3,
         t.experience.role2Achievement4,
       ],
-      technologies: ["HTML", "CSS", "JavaScript", "Git"],
-      featured: false
-    },
-    {
-      id: 3,
-      role: t.experience.role3,
-      company: t.experience.role3Company,
-      location: t.experience.role3Location,
-      period: t.experience.role3Period,
-      description: t.experience.role3Desc,
-      achievements: [
-        t.experience.role3Achievement1,
-        t.experience.role3Achievement2,
-        t.experience.role3Achievement3,
-        t.experience.role3Achievement4,
-      ],
-      technologies: ["Java", "SQL", "HTML/CSS", "JavaScript"],
+      technologies: ["English C2", "Communication", "Teaching", "Teamwork"],
       featured: false
     }
   ]
@@ -86,12 +72,18 @@ export function Experience() {
               {/* Content */}
               <div className={`p-6 border border-border hover:border-primary/50 transition-all bg-card/30 backdrop-blur-sm ${exp.featured ? 'border-l-2 border-l-primary' : ''}`}>
                 
-                {exp.featured && (
-                  <div className="inline-flex items-center gap-2 px-3 py-1 border border-primary text-primary text-xs font-mono mb-4 tracking-wider">
-                    <span className="w-1.5 h-1.5 bg-primary animate-pulse" />
-                    {t.experience.current}
+                <div className="flex flex-wrap items-center gap-3 mb-4">
+                  {exp.featured && (
+                    <div className="inline-flex items-center gap-2 px-3 py-1 border border-primary text-primary text-xs font-mono tracking-wider">
+                      <span className="w-1.5 h-1.5 bg-primary animate-pulse" />
+                      {t.experience.current}
+                    </div>
+                  )}
+                  <div className="inline-flex items-center gap-2 px-3 py-1 border border-border text-muted-foreground text-xs font-mono tracking-wider">
+                    <Briefcase className="w-3 h-3" />
+                    {exp.type}
                   </div>
-                )}
+                </div>
 
                 <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-4 mb-4">
                   <div>

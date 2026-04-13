@@ -15,6 +15,7 @@ export function Navigation() {
     { label: t.nav.about, href: "#about" },
     { label: t.nav.skills, href: "#skills" },
     { label: t.nav.experience, href: "#experience" },
+    { label: t.nav.education, href: "#education" },
     { label: t.nav.contact, href: "#contact" },
   ]
 
@@ -83,7 +84,7 @@ export function Navigation() {
               className="bg-primary text-primary-foreground hover:bg-primary/80 font-mono text-xs tracking-wider"
               asChild
             >
-              <a href="mailto:nayra@example.com">{t.nav.contactMe}</a>
+              <a href="mailto:nayratenciadiaz04@gmail.com">{t.nav.contactMe}</a>
             </Button>
           </div>
 
@@ -134,7 +135,7 @@ export function Navigation() {
                   className="w-full bg-primary text-primary-foreground hover:bg-primary/80 mt-2 font-mono text-xs"
                   asChild
                 >
-                  <a href="mailto:nayra@example.com">{t.nav.contactMe}</a>
+                  <a href="mailto:nayratenciadiaz04@gmail.com">{t.nav.contactMe}</a>
                 </Button>
               </li>
             </ul>
