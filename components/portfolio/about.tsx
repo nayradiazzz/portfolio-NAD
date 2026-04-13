@@ -1,67 +1,73 @@
 "use client"
 
-import { Globe, Code, Sparkles } from "lucide-react"
+import { Globe, Code, Sparkles, Heart } from "lucide-react"
 
 export function About() {
   return (
-    <section id="about" className="py-24 px-6 lg:px-16 border-t border-border">
-      <div className="max-w-5xl mx-auto">
+    <section id="about" className="py-24 px-6 lg:px-16 border-t border-border relative overflow-hidden">
+      {/* Background decoration */}
+      <div className="absolute top-0 right-0 w-64 h-64 rounded-full bg-primary/5 blur-3xl" />
+      
+      <div className="max-w-5xl mx-auto relative z-10">
         {/* Section header */}
         <div className="flex items-center gap-4 mb-12">
-          <div className="w-16 h-px bg-primary" />
-          <h2 className="text-sm font-medium tracking-widest text-primary uppercase">About Me</h2>
+          <div className="w-16 h-px bg-gradient-to-r from-primary to-accent" />
+          <h2 className="text-sm font-semibold tracking-widest text-primary uppercase flex items-center gap-2">
+            <Heart className="w-4 h-4" />
+            Sobre Mi
+          </h2>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16">
           {/* About text */}
           <div>
             <p className="text-xl lg:text-2xl text-foreground leading-relaxed mb-6 text-pretty">
-              I&apos;m a creative developer who believes code should transcend linguistic barriers. 
-              Born curious and raised multicultural, I blend technical precision with 
-              global sensibility.
+              Soy una desarrolladora creativa que cree que el codigo debe trascender las barreras linguisticas. 
+              Nacida curiosa y criada multicultural, combino precision tecnica con 
+              sensibilidad global.
             </p>
             <p className="text-muted-foreground leading-relaxed text-pretty">
-              My journey through <span className="text-foreground">Spanish, English, French, and Korean</span> taught me 
-              that every language shapes how we think and create. I bring this perspective to 
-              every line of code — building experiences that resonate across cultures and connect 
-              people worldwide.
+              Mi viaje a traves del <span className="text-primary font-medium">espanol, ingles, frances y coreano</span> me enseno 
+              que cada idioma moldea como pensamos y creamos. Traigo esta perspectiva a 
+              cada linea de codigo, construyendo experiencias que resuenan a traves de culturas y conectan 
+              personas en todo el mundo.
             </p>
           </div>
 
           {/* Highlights */}
-          <div className="space-y-6">
-            <div className="flex gap-4 p-4 rounded-lg bg-secondary/50 border border-border hover:border-primary/30 transition-colors">
-              <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
-                <Globe className="w-5 h-5 text-primary" />
+          <div className="space-y-4">
+            <div className="flex gap-4 p-5 rounded-2xl bg-card border border-border hover:border-primary/30 hover:shadow-lg hover:shadow-primary/5 transition-all">
+              <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center">
+                <Globe className="w-6 h-6 text-primary" />
               </div>
               <div>
-                <h3 className="font-medium text-foreground mb-1">Multilingual Communication</h3>
+                <h3 className="font-semibold text-foreground mb-1">Comunicacion Multilingue</h3>
                 <p className="text-sm text-muted-foreground">
-                  Fluent in 4 languages, enabling seamless collaboration with international teams and clients.
+                  Fluida en 4 idiomas, permitiendo colaboracion perfecta con equipos y clientes internacionales.
                 </p>
               </div>
             </div>
 
-            <div className="flex gap-4 p-4 rounded-lg bg-secondary/50 border border-border hover:border-primary/30 transition-colors">
-              <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
-                <Code className="w-5 h-5 text-primary" />
+            <div className="flex gap-4 p-5 rounded-2xl bg-card border border-border hover:border-primary/30 hover:shadow-lg hover:shadow-primary/5 transition-all">
+              <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center">
+                <Code className="w-6 h-6 text-primary" />
               </div>
               <div>
-                <h3 className="font-medium text-foreground mb-1">Full-Stack Foundation</h3>
+                <h3 className="font-semibold text-foreground mb-1">Base Full-Stack</h3>
                 <p className="text-sm text-muted-foreground">
-                  Solid grounding in both frontend and backend technologies, from UI to database.
+                  Solida formacion tanto en tecnologias frontend como backend, desde UI hasta base de datos.
                 </p>
               </div>
             </div>
 
-            <div className="flex gap-4 p-4 rounded-lg bg-secondary/50 border border-border hover:border-primary/30 transition-colors">
-              <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
-                <Sparkles className="w-5 h-5 text-primary" />
+            <div className="flex gap-4 p-5 rounded-2xl bg-card border border-border hover:border-primary/30 hover:shadow-lg hover:shadow-primary/5 transition-all">
+              <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center">
+                <Sparkles className="w-6 h-6 text-primary" />
               </div>
               <div>
-                <h3 className="font-medium text-foreground mb-1">Creative Problem Solver</h3>
+                <h3 className="font-semibold text-foreground mb-1">Solucionadora Creativa</h3>
                 <p className="text-sm text-muted-foreground">
-                  Passionate about finding elegant solutions and bringing fresh perspectives to challenges.
+                  Apasionada por encontrar soluciones elegantes y aportar perspectivas frescas a los desafios.
                 </p>
               </div>
             </div>

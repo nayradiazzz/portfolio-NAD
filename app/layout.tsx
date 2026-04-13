@@ -1,22 +1,23 @@
 import type { Metadata } from 'next'
-import { Inter, Space_Grotesk } from 'next/font/google'
+import { Poppins, Playfair_Display } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
 
-const inter = Inter({ 
+const poppins = Poppins({ 
   subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
   variable: "--font-sans"
 });
 
-const spaceGrotesk = Space_Grotesk({ 
+const playfair = Playfair_Display({ 
   subsets: ["latin"],
   variable: "--font-heading"
 });
 
 export const metadata: Metadata = {
-  title: 'Multilingual Web Developer | JavaScript, Java, PHP | International Creative Developer',
-  description: 'Creative junior web developer fluent in 4 languages (English, Spanish, French, Korean). Specializing in JavaScript, Java, PHP, and modern web technologies. Available for international opportunities.',
-  keywords: ['multilingual developer', 'junior web developer', 'JavaScript developer', 'international developer', 'creative agency developer'],
+  title: 'Nayra Atencia Diaz | Desarrolladora Web Multilingue',
+  description: 'Desarrolladora web junior fluida en 4 idiomas (Espanol, Ingles, Frances, Coreano). Especializada en JavaScript, Java, PHP y tecnologias web modernas. Disponible para oportunidades internacionales.',
+  keywords: ['Nayra Atencia Diaz', 'desarrolladora web', 'multilingual developer', 'junior web developer', 'JavaScript developer', 'international developer', 'creative agency developer'],
   generator: 'v0.app',
   icons: {
     icon: [
@@ -36,8 +37,8 @@ export const metadata: Metadata = {
     apple: '/apple-icon.png',
   },
   openGraph: {
-    title: 'Multilingual Web Developer | Your Name',
-    description: 'Creative junior web developer fluent in 4 languages. Building bridges between code and cultures.',
+    title: 'Nayra Atencia Diaz | Desarrolladora Web Multilingue',
+    description: 'Desarrolladora web creativa fluida en 4 idiomas. Construyendo puentes entre codigo y culturas.',
     type: 'website',
   },
 }
@@ -49,7 +50,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="bg-background">
-      <body className={`${inter.variable} ${spaceGrotesk.variable} font-sans antialiased`}>
+      <body className={`${poppins.variable} ${playfair.variable} font-sans antialiased`}>
         {children}
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>
