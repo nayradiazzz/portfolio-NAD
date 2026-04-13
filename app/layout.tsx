@@ -1,17 +1,18 @@
 import type { Metadata } from 'next'
-import { Poppins, Playfair_Display } from 'next/font/google'
+import { Space_Mono, Noto_Sans_KR } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
 
-const poppins = Poppins({ 
+const spaceMono = Space_Mono({ 
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
-  variable: "--font-sans"
+  weight: ["400", "700"],
+  variable: "--font-mono"
 });
 
-const playfair = Playfair_Display({ 
+const notoSansKR = Noto_Sans_KR({ 
   subsets: ["latin"],
-  variable: "--font-heading"
+  weight: ["300", "400", "500", "700"],
+  variable: "--font-sans"
 });
 
 export const metadata: Metadata = {
@@ -50,7 +51,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="bg-background">
-      <body className={`${poppins.variable} ${playfair.variable} font-sans antialiased`}>
+      <body className={`${notoSansKR.variable} ${spaceMono.variable} font-sans antialiased`}>
         {children}
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>

@@ -1,3 +1,6 @@
+"use client"
+
+import { LanguageProvider } from "@/lib/language-context"
 import { Navigation } from "@/components/portfolio/navigation"
 import { Hero } from "@/components/portfolio/hero"
 import { About } from "@/components/portfolio/about"
@@ -8,14 +11,17 @@ import { Footer } from "@/components/portfolio/footer"
 
 export default function Portfolio() {
   return (
-    <main className="min-h-screen">
-      <Navigation />
-      <Hero />
-      <About />
-      <Skills />
-      <Experience />
-      <Contact />
-      <Footer />
-    </main>
+    <LanguageProvider>
+      <main className="min-h-screen relative">
+        <div className="noise-overlay" />
+        <Navigation />
+        <Hero />
+        <About />
+        <Skills />
+        <Experience />
+        <Contact />
+        <Footer />
+      </main>
+    </LanguageProvider>
   )
 }
